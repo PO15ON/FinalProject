@@ -17,6 +17,7 @@ import com.google.android.gms.ads.AdView;
 
 public class MainActivity extends AppCompatActivity {
 
+    // TODO: 6/22/18 create res for each flavor (stopped here)
     public static final String TAG = "joke";
     Button jokeBtn;
 
@@ -42,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
         // Create an ad request. Check logcat output for the hashed device ID to
         // get test ads on a physical device. e.g.
         // "Use AdRequest.Builder.addTestDevice("ABCDEF012345") to get test ads on this device."
+
+
         AdRequest adRequest = new AdRequest.Builder()
                 .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
                 .build();
