@@ -15,7 +15,6 @@ import com.example.javajokes.JavaJokes;
 
 public class MainActivity extends AppCompatActivity {
 
-    // TODO: 6/22/18 create res for each flavor (stopped here)
     public static final String TAG = "joke";
     Button jokeBtn;
 
@@ -28,13 +27,7 @@ public class MainActivity extends AppCompatActivity {
         jokeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                JavaJokes jokeRetreiver = new JavaJokes();
-                String joke = jokeRetreiver.getJoke();
-
-                Log.d(TAG, "tellJoke: " + joke);
-
-                new EndpointsAsyncTask().execute(new Pair<Context, String>(MainActivity.this, joke));
-
+                new EndpointsAsyncTask().execute(MainActivity.this);
             }
         });
 
